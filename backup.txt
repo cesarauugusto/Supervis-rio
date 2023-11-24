@@ -1,0 +1,90 @@
+# Bibliotecas
+from dash import dash, dcc, html, Input, Output # acrescentando os módulos
+import pandas as pd             # Dataframe
+import plotly.express as px     # px.bar
+import dash_bootstrap_components as dbc # estilização do bootstrap
+
+# Estilização externa
+external_stylesheets=[dbc.themes.FLATLY]
+
+# Cria app com dash
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+
+#Varaiveis do processo
+vermelho = "danger" 
+verde = "success"
+amarelo = "warning"
+sinalizadorstarton = "Sinalizador Ligado"
+sinalizadorstartoff = "Sinalizador Desligado"
+sinalizadorsopton = "Sinalizador Ligado"
+sinalizadorsoptoff = "Sinalizador Desligado"
+emergenciaon = "Emergência Ligada"
+emergenciaoff = "Emergência Desligada"
+ligarMotor = "Ligar Motor"
+desligarMotor = "Desligar Motor"
+motoron = "Motor Ligado"
+motoroff = "Motor Desligado"
+sensoron = "Sensor Ligado"
+sensorof = "Sensor Desligado"
+
+# Layout do app
+app.layout = html.Div([
+   
+   html.Div([
+    
+    html.Div([
+        html.H2('Supervisão da Esteira'),
+    ], id='div_titulo'),
+       
+    html.Div([
+        dbc.Button('Sinalizador Start', color=amarelo,size="sm"),
+        dbc.Button('Sinalizador Stop', color=amarelo,size="sm"),
+        dbc.Button('Botão Emergência', color=amarelo,size="sm"),
+    ],className="gap-4", id='div_titulocima'),
+     
+    html.Div([
+        
+        html.Div([
+        
+        dbc.Button('Sinalizador Ligado ', color=verde,size="lg",id='start'),
+        ], id='div_start'),
+        
+        html.Div([
+            
+        dbc.Button('Sinalizador Ligado ', size="lg",id='stop'),
+        ], id='div_stop'),
+        
+        html.Div([
+        dbc.Button(emergenciaoff, size="lg",id='emergencia'),
+        ], id='div_emergencia'),
+        
+    ], id='div_botoescima',className="gap-2 col-20"),
+    
+    html.Div([
+      dbc.Button('ON/OFF Motor ', color=amarelo,size="sm"),
+        dbc.Button('Estado do Motor', color=amarelo,size="sm"),
+        dbc.Button('Estado do Sensor', color=amarelo,size="sm"),
+    ],className="gap-4", id='div_titulobaixo'),
+    
+    html.Div([
+        
+        html.Div([
+        dbc.Button('Motor Ligado',size="lg", id='acionamento,'),
+        ], id='div_acionamento'),
+        
+        html.Div([
+        dbc.Button('Estado do Motor', size="lg",id='motor'),
+        ], id='div_motor'),
+        
+        html.Div([
+        dbc.Button('Estado do Sensor',size="lg", id='sensor'),
+        ], id='div_sensor')
+        
+    ], id='div_botoesbaixo',className="gap-2"),
+    
+    ], id='div_contorno'),
+])
+
+# Executa o app em servidor
+if __name__ == '__main__':
+    app.run_server(debug=True)
