@@ -22,8 +22,8 @@
     background-color: red;
     margin:1% 20% 1% 20%;
     align-items: center;
-    padding-bottom: 1%;
-    padding-top: 1%;
+    padding: 1%;
+    border-radius: 10px;
 }
 
 #servidor_on{
@@ -54,6 +54,7 @@
     width: 50%;
     align-items: center;
     justify-content: center;
+    border-radius: 5px;
 }
 #sinalizador_stop{
     display: flex;
@@ -62,6 +63,7 @@
     width: 50%;
     align-items: center;
     justify-content: center;
+    border-radius: 5px;
 }
 #emergenciabtn{
     display: flex;
@@ -93,6 +95,7 @@
     justify-content: center;
     width: 48%;
     align-items: center;
+    border-radius: 5px;
 }
 #estado_sensor{
     display: flex;
@@ -100,5 +103,5 @@
     justify-content: center;
     width: 50%;
     align-items: center;
+    border-radius: 5px;
 }
-
