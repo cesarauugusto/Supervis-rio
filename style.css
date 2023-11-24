@@ -1,0 +1,104 @@
+#div_titulo{
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#logoif{
+    display: flex;
+    margin: 0% 4% 0% 0%;
+}
+#div_botoes_server{
+    display: flex;
+    justify-content: center;
+    align-items: row;
+}
+
+#label_servidor{
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    margin:1% 20% 1% 20%;
+    align-items: center;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+
+#servidor_on{
+    display: flex;
+    width: 29%;
+    justify-content: center;
+    margin: 0% 1%;
+    background-color: green;
+}
+#servidor_off{
+    display: flex;
+    width: 29%;
+    justify-content: center;
+    margin: 0% 1%;
+    background-color: red;
+}
+
+#div_sinaiscima{
+    display:flex;
+    align-items: row;
+    justify-content: center;
+    margin: 1% 20% 1% 20%;
+}
+
+#sinalizador_start{
+    display: flex;
+    background-color: red;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+#sinalizador_stop{
+    display: flex;
+    background-color: red;
+    margin: 0% 3% 0% 3%;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+#emergenciabtn{
+    display: flex;
+    background-color: red;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+#div_sinaisbaixo{
+    display:flex;
+    align-items: row;
+    justify-content: center;
+    margin: 1% 20% 1% 20%;
+}
+
+#aciona_btn{
+    display: flex;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    width: 47%;
+    
+}
+#estado_motor{
+    display: flex;
+    background-color: red;
+    margin: 0% 3% 0% 3%;
+    justify-content: center;
+    width: 48%;
+    align-items: center;
+}
+#estado_sensor{
+    display: flex;
+    background-color: red;
+    justify-content: center;
+    width: 50%;
+    align-items: center;
+}
+
